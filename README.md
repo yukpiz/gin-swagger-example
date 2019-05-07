@@ -1,1 +1,1 @@
-# go-swagger-example
+# gin-swagger-example
