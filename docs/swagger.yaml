@@ -1,0 +1,46 @@
+basePath: /
+host: localhost:8081
+info:
+  contact:
+    email: yukpiz@gmail.com
+    name: '@yukpiz'
+    url: https://twitter.com/yukpiz
+  description: gin-swaggerを試すためのAPI
+  license:
+    name: WTFPL
+    url: http://www.wtfpl.net/
+  termsOfService: http://swagger.io/terms/
+  title: gin-swaggerサンプルAPI
+  version: "1"
+paths:
+  /hello:
+    get:
+      consumes:
+      - application/json
+      description: ログに"Hello"と出力します
+      parameters:
+      - description: パラメータの説明
+        in: query
+        name: user_id
+        required: true
+        type: integer
+      - description: パラメータの説明
+        in: query
+        name: merchant_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功レスポンスの説明
+          schema:
+            type: string
+        "400":
+          description: 失敗レスポンスの説明
+          schema:
+            type: string
+      summary: APIのサマリー説明
+      tags:
+      - タグ1
+swagger: "2.0"

@@ -1,0 +1,67 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "gin-swaggerを試すためのAPI",
+        "title": "gin-swaggerサンプルAPI",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "@yukpiz",
+            "url": "https://twitter.com/yukpiz",
+            "email": "yukpiz@gmail.com"
+        },
+        "license": {
+            "name": "WTFPL",
+            "url": "http://www.wtfpl.net/"
+        },
+        "version": "1"
+    },
+    "host": "localhost:8081",
+    "basePath": "/",
+    "paths": {
+        "/hello": {
+            "get": {
+                "description": "ログに\"Hello\"と出力します",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "タグ1"
+                ],
+                "summary": "APIのサマリー説明",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "パラメータの説明",
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "パラメータの説明",
+                        "name": "merchant_id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功レスポンスの説明",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "失敗レスポンスの説明",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
